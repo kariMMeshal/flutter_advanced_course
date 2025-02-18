@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/routing/app_router.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
-import 'package:flutter_advanced_course/core/theme/colors.dart';
+import 'package:flutter_advanced_course/core/theme/colors_manager.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DocApp extends StatelessWidget {
@@ -19,7 +19,7 @@ class DocApp extends StatelessWidget {
         initialRoute: Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
         theme: ThemeData(
-          primaryColor: ColorsManager.kmainBlue,
+          primaryColor: ColorsManager.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
       ),
