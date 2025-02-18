@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/helpers/extensions.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
-import 'package:flutter_advanced_course/core/theme/colors.dart';
+import 'package:flutter_advanced_course/core/theme/colors_manager.dart';
 import 'package:flutter_advanced_course/core/theme/styles.dart';
 
 class GetStartedButton extends StatelessWidget {
@@ -15,7 +15,7 @@ class GetStartedButton extends StatelessWidget {
         },
         style: ButtonStyle(
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            backgroundColor: WidgetStatePropertyAll(ColorsManager.kmainBlue),
+            backgroundColor: WidgetStatePropertyAll(ColorsManager.mainBlue),
             minimumSize: WidgetStatePropertyAll(Size(double.infinity, 52)),
             shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16)))),
