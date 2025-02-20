@@ -10,11 +10,11 @@ class AlreadyHaveAccountText extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(children: [
         TextSpan(
-          text: 'Already have an accout',
+          text: 'Already have an accout?',
           style: Styles.font14GreyRegular,
         ),
         TextSpan(
-          text: ' Sign in ',
+          text: ' Sign In ',
           style: Styles.font14BlueSemiBold,
         ),
       ]),
