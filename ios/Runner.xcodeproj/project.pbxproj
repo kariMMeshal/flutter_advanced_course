@@ -577,7 +577,7 @@
 			};
 			name = Release;
 		};
-		97C147061CF9000F007C117E /* developmentDebug */ = {
+		97C147061CF9000F007C117E /* development */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
@@ -590,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.development;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -599,7 +599,7 @@
 			};
 			name = developmentDebug;
 		};
-		97C147061CF9000F007C117E /* developmentRelease */ = {
+		97C147061CF9000F007C117E /* development */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
@@ -612,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.development;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -620,7 +620,7 @@
 			};
 			name = developmentRelease;
 		};
-		97C1470A1CF9000F007C1180 /* productionDebug */ = {
+		97C1470A1CF9000F007C1180 /* production */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
@@ -633,7 +633,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.production;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -642,7 +642,7 @@
 			};
 			name = productionDebug;
 		};
-		97C1470A1CF9000F007C1180 /* productionRelease */ = {
+		97C1470A1CF9000F007C1180 /* production */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082F /* Production.xcconfig */;
 			buildSettings = {
@@ -655,7 +655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.production;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterAdvancedCourse.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
