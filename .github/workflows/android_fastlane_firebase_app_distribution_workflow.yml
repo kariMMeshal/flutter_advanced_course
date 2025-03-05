@@ -26,9 +26,15 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: "3.4.2"
-        bundler-cache: true
+        ruby-version: "3.3"
+        bundler-cache: false
         working-directory: android
+
+    - name: Install Bundler Dependencies
+      run: |
+        gem install bundler
+        bundle install --no-cache
+      working-directory: android
         
     - name: Build and Distribute App
       env:
@@ -36,4 +42,3 @@ jobs:
       run: |
         bundle exec fastlane android firebase_distribution
       working-directory: android
-
