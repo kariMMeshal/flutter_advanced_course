@@ -74,12 +74,12 @@ class AppTextFormField extends StatelessWidget {
             width: 1.3,
           ),
         ),
-        hintStyle: hintStyle ?? Styles.font14lightGreyRegular,
+        hintStyle: hintStyle ?? TextStyles.font14lightGreyRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
       ),
       obscureText: isObscureText ?? false,
-      style: inputTextStyle ?? Styles.font14DarkBlueMedium,
+      style: inputTextStyle ?? TextStyles.font14DarkBlueMedium,
       validator: (value) {
         return validator(value);
       },

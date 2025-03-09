@@ -3,7 +3,7 @@ import 'package:flutter_advanced_course/core/theme/colors_manager.dart';
 import 'package:flutter_advanced_course/core/theme/font_weight_helper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Styles {
+class TextStyles {
   static TextStyle font24BlackBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
@@ -12,6 +12,11 @@ class Styles {
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,
     fontWeight: FontWeightHelper.bold,
+    color: ColorsManager.mainBlue,
+  );
+  static TextStyle font12BlueRegular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
     color: ColorsManager.mainBlue,
   );
   static TextStyle font14BlueRegular = TextStyle(
@@ -29,6 +34,21 @@ class Styles {
     fontWeight: FontWeightHelper.meduim,
     color: ColorsManager.darkBlue,
   );
+  static TextStyle font12DarkBlueRegular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.darkBlue,
+  );
+  static TextStyle font18DarkBlueBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: ColorsManager.darkBlue,
+  );
+  static TextStyle font18DarkBlueSemiBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.darkBlue,
+  );
   static TextStyle font24BlueBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
@@ -39,14 +59,25 @@ class Styles {
     fontWeight: FontWeightHelper.regular,
     color: ColorsManager.grey,
   );
+  static TextStyle font12GreyRegular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorsManager.grey,
+  );
   static TextStyle font14lightGreyRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorsManager.lightGrey,
   );
+
   static TextStyle font16WhiteSemiBold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.semiBold,
+    color: Colors.white,
+  );
+  static TextStyle font18WhiteMedium = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.meduim,
     color: Colors.white,
   );
 }

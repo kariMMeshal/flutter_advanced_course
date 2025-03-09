@@ -44,7 +44,7 @@ class LoginBlocListner extends StatelessWidget {
       context: context,
       builder: (context) => AlertDialog(
         icon: Icon(Icons.error, color: Colors.red),
-        content: Text(error, style: Styles.font14DarkBlueMedium),
+        content: Text(error, style: TextStyles.font14DarkBlueMedium),
         actions: [
           TextButton(
             onPressed: () {
@@ -52,7 +52,7 @@ class LoginBlocListner extends StatelessWidget {
             },
             child: Text(
               "Got it",
-              style: Styles.font14BlueSemiBold,
+              style: TextStyles.font14BlueSemiBold,
             ),
           ),
         ],
