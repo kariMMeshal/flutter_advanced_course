@@ -1,0 +1,15 @@
+import 'package:dio/dio.dart';
+import 'package:flutter_advanced_course/core/networking/api_constants.dart';
+import 'package:flutter_advanced_course/features/home/data/models/specializations_response_model.dart';
+import 'package:retrofit/retrofit.dart';
+import 'home_api_constants.dart';
+
+part 'home_api_services.g.dart';
+
+@RestApi(baseUrl: ApiConstants.apiBaseUrl)
+abstract class HomeApiServices {
+  factory HomeApiServices(Dio dio) = _HomeApiServices;
+
+  @GET(HomeApiConstants.spesializationEP)
+  Future<SpecializationsResponseModel> getSpecialization();
+}
