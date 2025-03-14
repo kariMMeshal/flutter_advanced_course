@@ -40,6 +40,8 @@ app.*.symbols
 app.*.map.json
 
 android/.cxx/
+*.cc
+*.cmake
 
 # Android Studio will place build artifacts here
 /android/app/debug
