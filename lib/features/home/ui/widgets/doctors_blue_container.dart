@@ -41,7 +41,7 @@ class DoctorsBlueContainer extends StatelessWidget {
                             borderRadius: BorderRadius.circular(48))),
                     child: Text(
                       'Find Nearby',
-                      style: TextStyles.font12BlueRegular,
+                      style: TextStyles.font18BlueRegular,
                     ),
                   ),
                 )
