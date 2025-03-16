@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/helpers/spacing.dart';
 import 'package:flutter_advanced_course/core/theme/styles.dart';
 import 'package:flutter_advanced_course/core/widgets/app_text_button.dart';
-import 'package:flutter_advanced_course/features/login/logic/cubit/login_cubit.dart';
+import 'package:flutter_advanced_course/features/login/logic/login_cubit.dart';
 import 'package:flutter_advanced_course/features/login/ui/widgets/dont_have_account_text.dart';
 import 'package:flutter_advanced_course/features/login/ui/widgets/email_and_password.dart';
 import 'package:flutter_advanced_course/features/login/ui/widgets/login_bloc_listner.dart';

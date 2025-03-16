@@ -4,7 +4,7 @@ import 'package:flutter_advanced_course/core/networking/dio_factory.dart';
 import 'package:flutter_advanced_course/features/home/data/apis/home_api_services.dart';
 import 'package:flutter_advanced_course/features/home/data/repos/home_repo.dart';
 import 'package:flutter_advanced_course/features/login/data/repos/login_repo.dart';
-import 'package:flutter_advanced_course/features/login/logic/cubit/login_cubit.dart';
+import 'package:flutter_advanced_course/features/login/logic/login_cubit.dart';
 import 'package:flutter_advanced_course/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:flutter_advanced_course/features/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:get_it/get_it.dart';

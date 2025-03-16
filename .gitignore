@@ -31,7 +31,7 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+build/
 
 # Symbolication related
 app.*.symbols
@@ -49,7 +49,29 @@ android/.cxx/
 /android/app/profile
 /android/app/release
 
-#
+# Ignore C++ and CMake structured logs
+android/app/.cxx/
+
+# Ignore Gradle build files related to C++
+android/app/.cxx/Debug/
+
+# Ignore specific debug files
+**/additional_project_files.txt
+**/android_gradle_build.json
+**/android_gradle_build_mini.json
+**/build.ninja
+**/build.ninja.txt
+**/build_file_index.txt
+**/compile_commands.json
+**/compile_commands.json.bin
+**/metadata_generation_command.txt
+**/prefab_config.json
+**/symbol_folder_index.txt
+
+# Ignore CMakeLists.txt in flutter_tools
+flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt
+
+# macOS and Windows generated files
 macos/Flutter/GeneratedPluginRegistrant.swift
 windows/flutter/generated_plugin_registrant.cc
 windows/flutter/generated_plugins.cmake

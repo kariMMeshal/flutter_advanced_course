@@ -3,8 +3,8 @@ import 'package:flutter_advanced_course/core/helpers/extensions.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
 import 'package:flutter_advanced_course/core/theme/colors_manager.dart';
 import 'package:flutter_advanced_course/core/theme/styles.dart';
-import 'package:flutter_advanced_course/features/login/logic/cubit/login_cubit.dart';
-import 'package:flutter_advanced_course/features/login/logic/cubit/login_state.dart';
+import 'package:flutter_advanced_course/features/login/logic/login_cubit.dart';
+import 'package:flutter_advanced_course/features/login/logic/login_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginBlocListner extends StatelessWidget {

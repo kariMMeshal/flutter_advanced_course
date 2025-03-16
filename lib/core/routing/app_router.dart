@@ -3,7 +3,7 @@ import 'package:flutter_advanced_course/core/di/dependency_injection.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
 import 'package:flutter_advanced_course/features/home/logic/home_cubit.dart';
 import 'package:flutter_advanced_course/features/home/ui/home_screen.dart';
-import 'package:flutter_advanced_course/features/login/logic/cubit/login_cubit.dart';
+import 'package:flutter_advanced_course/features/login/logic/login_cubit.dart';
 import 'package:flutter_advanced_course/features/login/ui/login_screen.dart';
 import 'package:flutter_advanced_course/features/onboarding/ui/onboarding_screen.dart';
 import 'package:flutter_advanced_course/features/sign_up/logic/cubit/sign_up_cubit.dart';
