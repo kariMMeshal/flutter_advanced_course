@@ -22,3 +22,7 @@ extension Navigation on BuildContext {
 extension StringExtinsion on String? {
   bool isNullOrEmpty() => this == null || this == "";
 }
+
+extension ListExtinsion<T> on List<T>? {
+  bool isNullOrEmpty() => this == null || this!.isEmpty;
+}
