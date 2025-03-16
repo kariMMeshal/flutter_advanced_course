@@ -1,8 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theme/colors_manager.dart';
 import '../../../../../core/theme/styles.dart';
 import '../../../data/models/specializations_response_model.dart';
 
@@ -19,8 +21,21 @@ class DoctorsListviewItem extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: CachedNetworkImage(
-              progressIndicatorBuilder: (context, url, downloadProgress) =>
-                  CircularProgressIndicator(value: downloadProgress.progress),
+              progressIndicatorBuilder: (context, url, downloadProgress) {
+                return Shimmer.fromColors(
+                  baseColor: ColorsManager.lightGrey,
+                  highlightColor: Colors.white,
+                  child: Container(
+                    width: 110.w,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      borderRadius: BorderRadius.circular(12.0),
+                      color: Colors.white,
+                    ),
+                  ),
+                );
+              },
               errorWidget: (context, url, error) => Icon(Icons.error),
               width: 110.w,
               height: 120.h,
