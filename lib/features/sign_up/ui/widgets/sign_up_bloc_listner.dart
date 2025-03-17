@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/helpers/extensions.dart';
+import 'package:flutter_advanced_course/core/networking/api_error_model.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
 import 'package:flutter_advanced_course/core/theme/colors_manager.dart';
 import 'package:flutter_advanced_course/core/theme/styles.dart';
@@ -14,10 +15,12 @@ class SignUpBlocListner extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<SignUpCubit, SignUpState>(
       listenWhen: (previous, current) =>
-          current is Loading || current is Success || current is Error,
+          current is SignUpLoading ||
+          current is SignUpSuccess ||
+          current is SignUpError,
       listener: (context, state) {
         state.whenOrNull(
-          loading: () {
+          signUpLoading: () {
             showDialog(
               context: context,
               builder: (context) => Center(
@@ -25,12 +28,12 @@ class SignUpBlocListner extends StatelessWidget {
               ),
             );
           },
-          success: (signUpResponse) {
+          signUpSuccess: (signUpResponse) {
             context.pop();
             context.pushNamed(Routes.homeScreen);
           },
-          error: (error) {
-            setupErrorState(context, error);
+          signUpError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -38,13 +41,14 @@ class SignUpBlocListner extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         icon: Icon(Icons.error, color: Colors.red),
-        content: Text(error, style: TextStyles.font14DarkBlueMedium),
+        content: Text(apiErrorModel.getAllErrorMessage(),
+            style: TextStyles.font14DarkBlueMedium),
         actions: [
           TextButton(
             onPressed: () {

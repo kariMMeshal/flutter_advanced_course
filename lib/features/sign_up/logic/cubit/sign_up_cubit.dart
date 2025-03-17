@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {
   final SignUpRepo _signUpRepo;
-  SignUpCubit(this._signUpRepo) : super(SignUpState.initial());
+  SignUpCubit(this._signUpRepo) : super(SignUpState.signUpInitial());
 
   TextEditingController emailController = TextEditingController();
   TextEditingController nameController = TextEditingController();
@@ -17,21 +17,21 @@ class SignUpCubit extends Cubit<SignUpState> {
   final formKey = GlobalKey<FormState>();
 
   void emitSignUpStates() async {
-    emit(const SignUpState.loading());
+    emit(const SignUpLoading());
     final response = await _signUpRepo.signUp(SignUpRequestBody(
         email: emailController.text.trim().toLowerCase(),
         password: passwordController.text,
         passwordConfirmation: passwordConfirmationController.text,
         gender: 0,
-        name: nameController.text.trim(),
+        name:' nameController.text.trim()',
         phone: phoneController.text));
 
     response.when(
       success: (loginResponse) {
-        emit(SignUpState.success(loginResponse));
+        emit(SignUpSuccess(loginResponse));
       },
-      failure: (error) {
-        emit(SignUpState.error(error: error.apiErrorModel.message ?? ''));
+      failure: (apiErrorModel) {
+        emit(SignUpError(apiErrorModel));
       },
     );
   }

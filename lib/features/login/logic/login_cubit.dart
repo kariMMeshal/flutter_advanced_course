@@ -10,14 +10,14 @@ import '../../../core/networking/dio_factory.dart';
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
 
-  LoginCubit(this._loginRepo) : super(const LoginState.initial());
+  LoginCubit(this._loginRepo) : super(const LoginInitial());
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
 
   void emitLoginStates() async {
-    emit(const LoginState.loading());
+    emit(const LoginLoading());
     final response = await _loginRepo.login(
       LoginRequestBody(
         email: emailController.text.trim().toLowerCase(),
@@ -28,10 +28,10 @@ class LoginCubit extends Cubit<LoginState> {
     response.when(
       success: (loginResponse) async {
         await saveUserToken(loginResponse.userData?.token ?? '');
-        emit(LoginState.success(loginResponse));
+        emit(LoginSuccess(loginResponse));
       },
-      failure: (error) {
-        emit(LoginState.error(error: error.apiErrorModel.message ?? ''));
+      failure: (apiErrorModel) {
+        emit(LoginError(apiErrorModel));
       },
     );
   }

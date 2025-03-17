@@ -1,5 +1,4 @@
 import 'package:flutter_advanced_course/core/helpers/extensions.dart';
-import 'package:flutter_advanced_course/core/networking/api_error_handler.dart';
 import 'package:flutter_advanced_course/features/home/data/models/specializations_response_model.dart';
 import 'package:flutter_advanced_course/features/home/data/repos/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,8 +21,8 @@ class HomeCubit extends Cubit<HomeState> {
         emit(HomeState.specializationsSuccess(specializationsList));
         getDoctorsList(specializationId: specializationsList.first!.id);
       },
-      failure: (errorHandler) {
-        emit(HomeState.specializationsError(errorHandler));
+      failure: (apiErrorModel) {
+        emit(HomeState.specializationsError(apiErrorModel));
       },
     );
   }
@@ -34,7 +33,7 @@ class HomeCubit extends Cubit<HomeState> {
     if (!doctorsList.isNullOrEmpty()) {
       emit(DoctorsSuccess(doctorsList));
     } else {
-      emit(DoctorsError(ErrorHandler.handle("No Doctors Found")));
+      emit(const DoctorsError());
     }
   }
 
