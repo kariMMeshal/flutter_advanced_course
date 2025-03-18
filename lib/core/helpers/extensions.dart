@@ -26,3 +26,7 @@ extension StringExtinsion on String? {
 extension ListExtinsion<T> on List<T>? {
   bool isNullOrEmpty() => this == null || this!.isEmpty;
 }
+
+extension MapExtinsion<K, V> on Map<K, V>? {
+  bool isNullOrEmpty() => this == null || this!.isEmpty || this == {};
+}
