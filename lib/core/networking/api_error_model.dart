@@ -21,7 +21,6 @@ class ApiErrorModel {
 
   String getAllErrorMessage() {
     if (errors.isNullOrEmpty()) {
-      print('returning Message');
       return message ?? "Unkown Error";
     }
 

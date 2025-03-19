@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/helpers/spacing.dart';
 import 'package:flutter_advanced_course/features/home/logic/home_state.dart';
-import 'package:flutter_advanced_course/features/home/ui/widgets/doctors/doctors_shimmer_loading.dart';
-import 'package:flutter_advanced_course/features/home/ui/widgets/specialization/speciality_shimmer_loading.dart';
+import 'package:flutter_advanced_course/features/home/ui/widgets/doctors_list/doctors_shimmer_loading.dart';
+import 'package:flutter_advanced_course/features/home/ui/widgets/specialization_list/speciality_shimmer_loading.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../logic/home_cubit.dart';

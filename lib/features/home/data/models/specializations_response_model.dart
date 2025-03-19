@@ -20,7 +20,7 @@ class SpecializationsData {
   int? id;
   String? name;
   @JsonKey(name: 'doctors')
-  List<Doctors?>? doctorsList;
+  List<DoctorsModel?>? doctorsList;
 
   SpecializationsData({
     this.id,
@@ -33,28 +33,45 @@ class SpecializationsData {
 }
 
 @JsonSerializable()
-class Doctors {
+class DoctorsModel {
   int? id;
   String? name;
   String? email;
   String? phone;
-  String? photo;
-  String degree;
+  String? degree;
   String? gender;
   @JsonKey(name: 'appoint_price')
   int? price;
+  @JsonKey(name: 'start_time')
+  String? startTime;
+  @JsonKey(name: 'end_time')
+  String? endTime;
+  CityModel? city;
 
-  Doctors({
+  DoctorsModel({
     this.id,
     this.name,
     this.email,
     this.phone,
-    this.photo,
     this.price,
     this.gender,
     required this.degree,
+    this.startTime,
+    this.endTime,
+    this.city,
   });
 
-  factory Doctors.fromJson(Map<String, dynamic> json) =>
-      _$DoctorsFromJson(json);
+  factory DoctorsModel.fromJson(Map<String, dynamic> json) =>
+      _$DoctorsModelFromJson(json);
+}
+
+@JsonSerializable()
+class CityModel {
+  int? id;
+  String? name;
+
+  CityModel({this.id, this.name});
+
+  factory CityModel.fromJson(Map<String, dynamic> json) =>
+      _$CityModelFromJson(json);
 }

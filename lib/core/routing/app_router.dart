@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/core/di/dependency_injection.dart';
 import 'package:flutter_advanced_course/core/routing/routes.dart';
+import 'package:flutter_advanced_course/features/home/data/models/specializations_response_model.dart';
 import 'package:flutter_advanced_course/features/home/logic/home_cubit.dart';
 import 'package:flutter_advanced_course/features/home/ui/home_screen.dart';
+import 'package:flutter_advanced_course/features/home/ui/show_doctor_screen.dart';
 import 'package:flutter_advanced_course/features/login/logic/login_cubit.dart';
 import 'package:flutter_advanced_course/features/login/ui/login_screen.dart';
 import 'package:flutter_advanced_course/features/onboarding/ui/onboarding_screen.dart';
@@ -36,6 +38,13 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<LoginCubit>(),
             child: const LoginScreen(),
+          ),
+        );
+      case Routes.showDoctorScreen:
+        final doctorModel = settings.arguments as DoctorsModel;
+        return MaterialPageRoute(
+          builder: (context) => ShowDoctorScreen(
+            doctorsModel: doctorModel,
           ),
         );
       default:

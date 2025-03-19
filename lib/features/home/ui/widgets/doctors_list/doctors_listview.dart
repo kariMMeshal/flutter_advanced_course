@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_course/features/home/data/models/specializations_response_model.dart';
-import 'package:flutter_advanced_course/features/home/ui/widgets/doctors/doctors_listview_item.dart';
+import 'package:flutter_advanced_course/features/home/ui/widgets/doctors_list/doctors_listview_item.dart';
 
 class DoctorsListview extends StatelessWidget {
-  final List<Doctors?> doctorsList;
+  final List<DoctorsModel?> doctorsList;
   const DoctorsListview({super.key, required this.doctorsList});
 
   @override

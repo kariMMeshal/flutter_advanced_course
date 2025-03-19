@@ -28,7 +28,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void getDoctorsList({required int? specializationId}) {
-    List<Doctors?>? doctorsList =
+    List<DoctorsModel?>? doctorsList =
         _getDoctorsListBySpecializationId(specializationId);
     if (!doctorsList.isNullOrEmpty()) {
       emit(DoctorsSuccess(doctorsList));

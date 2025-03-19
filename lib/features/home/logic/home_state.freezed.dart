@@ -23,7 +23,7 @@ mixin _$HomeState {
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ mixin _$HomeState {
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -45,7 +45,7 @@ mixin _$HomeState {
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) =>
@@ -157,7 +157,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return initial();
@@ -171,7 +171,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return initial?.call();
@@ -185,7 +185,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {
@@ -303,7 +303,7 @@ class _$SpecializationsLoadingImpl
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return specializationsLoading();
@@ -317,7 +317,7 @@ class _$SpecializationsLoadingImpl
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return specializationsLoading?.call();
@@ -331,7 +331,7 @@ class _$SpecializationsLoadingImpl
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {
@@ -489,7 +489,7 @@ class _$SpecializationsSuccessImpl
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return specializationsSuccess(specializationsList);
@@ -503,7 +503,7 @@ class _$SpecializationsSuccessImpl
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return specializationsSuccess?.call(specializationsList);
@@ -517,7 +517,7 @@ class _$SpecializationsSuccessImpl
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {
@@ -673,7 +673,7 @@ class _$SpecializationsErrorImpl
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return specializationsError(apiErrorModel);
@@ -687,7 +687,7 @@ class _$SpecializationsErrorImpl
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return specializationsError?.call(apiErrorModel);
@@ -701,7 +701,7 @@ class _$SpecializationsErrorImpl
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {
@@ -776,7 +776,7 @@ abstract class _$$DoctorsSuccessImplCopyWith<$Res> {
           $Res Function(_$DoctorsSuccessImpl) then) =
       __$$DoctorsSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Doctors?>? doctorsList});
+  $Res call({List<DoctorsModel?>? doctorsList});
 }
 
 /// @nodoc
@@ -798,7 +798,7 @@ class __$$DoctorsSuccessImplCopyWithImpl<$Res>
       freezed == doctorsList
           ? _value._doctorsList
           : doctorsList // ignore: cast_nullable_to_non_nullable
-              as List<Doctors?>?,
+              as List<DoctorsModel?>?,
     ));
   }
 }
@@ -808,12 +808,12 @@ class __$$DoctorsSuccessImplCopyWithImpl<$Res>
 class _$DoctorsSuccessImpl
     with DiagnosticableTreeMixin
     implements DoctorsSuccess {
-  const _$DoctorsSuccessImpl(final List<Doctors?>? doctorsList)
+  const _$DoctorsSuccessImpl(final List<DoctorsModel?>? doctorsList)
       : _doctorsList = doctorsList;
 
-  final List<Doctors?>? _doctorsList;
+  final List<DoctorsModel?>? _doctorsList;
   @override
-  List<Doctors?>? get doctorsList {
+  List<DoctorsModel?>? get doctorsList {
     final value = _doctorsList;
     if (value == null) return null;
     if (_doctorsList is EqualUnmodifiableListView) return _doctorsList;
@@ -864,7 +864,7 @@ class _$DoctorsSuccessImpl
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return doctorSuccess(doctorsList);
@@ -878,7 +878,7 @@ class _$DoctorsSuccessImpl
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return doctorSuccess?.call(doctorsList);
@@ -892,7 +892,7 @@ class _$DoctorsSuccessImpl
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {
@@ -949,10 +949,10 @@ class _$DoctorsSuccessImpl
 }
 
 abstract class DoctorsSuccess implements HomeState {
-  const factory DoctorsSuccess(final List<Doctors?>? doctorsList) =
+  const factory DoctorsSuccess(final List<DoctorsModel?>? doctorsList) =
       _$DoctorsSuccessImpl;
 
-  List<Doctors?>? get doctorsList;
+  List<DoctorsModel?>? get doctorsList;
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -1013,7 +1013,7 @@ class _$DoctorsErrorImpl with DiagnosticableTreeMixin implements DoctorsError {
     required TResult Function(List<SpecializationsData?>? specializationsList)
         specializationsSuccess,
     required TResult Function(ApiErrorModel apiErrorModel) specializationsError,
-    required TResult Function(List<Doctors?>? doctorsList) doctorSuccess,
+    required TResult Function(List<DoctorsModel?>? doctorsList) doctorSuccess,
     required TResult Function() doctorsError,
   }) {
     return doctorsError();
@@ -1027,7 +1027,7 @@ class _$DoctorsErrorImpl with DiagnosticableTreeMixin implements DoctorsError {
     TResult? Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult? Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult? Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult? Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult? Function()? doctorsError,
   }) {
     return doctorsError?.call();
@@ -1041,7 +1041,7 @@ class _$DoctorsErrorImpl with DiagnosticableTreeMixin implements DoctorsError {
     TResult Function(List<SpecializationsData?>? specializationsList)?
         specializationsSuccess,
     TResult Function(ApiErrorModel apiErrorModel)? specializationsError,
-    TResult Function(List<Doctors?>? doctorsList)? doctorSuccess,
+    TResult Function(List<DoctorsModel?>? doctorsList)? doctorSuccess,
     TResult Function()? doctorsError,
     required TResult orElse(),
   }) {

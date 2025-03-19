@@ -4,8 +4,8 @@ import 'package:flutter_advanced_course/features/home/ui/widgets/doctors_blue_co
 import 'package:flutter_advanced_course/features/home/ui/widgets/doctors_specialty_see_all.dart';
 import 'package:flutter_advanced_course/features/home/ui/widgets/home_top_bar.dart';
 
-import 'widgets/doctors/doctors_bloc_builder.dart';
-import 'widgets/specialization/specializations_bloc_builder.dart';
+import 'widgets/doctors_list/doctors_bloc_builder.dart';
+import 'widgets/specialization_list/specializations_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
